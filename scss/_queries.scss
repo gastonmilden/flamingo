@@ -1,0 +1,249 @@
+@media (min-width:320px) and (max-width: 768px) {
+    * {
+        font-size: 18px;
+    }
+
+    header.header {
+        div {
+            width: 90%;
+
+            div.title-container {
+                width: 50%;
+
+                h1 {
+                    a {
+                        font-size: 39px;
+                    }
+                }
+            }
+
+            div.navbar-header {
+                width: 50%;
+
+                nav {
+                    #checkbox-menu:checked ~ ul {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    label {
+                        display: flex;
+
+                        i {
+                            font-size: 35px;
+                            z-index: 100;
+                        }
+                    }
+
+                    ul {
+                        display: none;
+                        flex-direction: column;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100vh;
+                        opacity: 95%;
+                        padding-left: 0;
+
+                        li {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: none;
+                            padding: 15px;
+                            width: 100%;
+
+                            a {
+                                color: #ff8a84;
+                                font-size: 35px;
+                            }
+                        }
+
+                        .item-nav-last {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: none;
+                            padding: 0px 15px;
+                            width: 100%;
+
+                            a {
+                                color: #ff8a84;
+                                font-size: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Index Page Query */
+    #index-row {
+        flex-direction: column;
+    }
+
+    #index-col {
+        justify-content: flex-start !important; 
+    }
+
+    .know-our-music-title {
+        padding-bottom: 60px;
+    }
+
+    /* Albums Page Query */
+
+    .albums-banner {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        div {
+            width: 100%;
+        }
+    }
+
+    .albums-container {
+        h3 {
+            font-size: 35px;
+            padding-bottom: 60px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            div {
+                width: 100%;
+
+                img {
+                    width: 70%;
+                }
+            }
+        }
+    }
+
+    /* Tours Page Query */
+
+    .tours-banner {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        div {
+            width: 100%;
+        }
+    }
+
+    p.map {
+        color: #ff8a84;
+    }
+
+    /* Media Page Query */
+
+    .media-banner {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        div {
+            width: 100%;
+        }
+    }
+
+    /* About Us Page Query */
+
+    .about-us-banner {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        div {
+            width: 100%;
+        }
+    }
+
+    .history-container {
+        div.band-history {
+            width: 85%;
+        }
+    }
+
+    .members-section {
+        div {
+            flex-direction: column;
+            align-items: center;
+
+            div {
+                width: 75%;
+
+                img {
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+
+    .contact-us-container {
+        h3.contact-us-title {
+            text-align: center;
+        }
+
+        article {
+            width: 85%;
+
+            button {
+                width: 50%;
+                margin-top: 30px;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    * {
+        font-size: 20px;
+    }
+
+    header.header {
+        div {
+            .navbar-header {
+                width: 100%;
+                display: flex;
+                justify-content: end;
+
+                nav {
+                    ul {
+                        display: flex;
+                        justify-content: end;
+                        align-items: center;
+                        margin-bottom: 0;
+
+                        .item-nav {
+                            padding: 0px 15px;
+                            border-right: 2px solid white;
+
+                            a {
+                                font-size: 18px;
+                                color: #ff8a84;
+                            }
+                        }
+
+                        .item-nav-last {
+                            padding: 10px 15px;
+                            padding-right: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
