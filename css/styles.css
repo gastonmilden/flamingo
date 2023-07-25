@@ -5,7 +5,7 @@
   list-style: none;
   background-color: #090909;
   font-size: 24px;
-  font-family: "Tenali Ramakrishna", sans-serif;
+  font-family: 'Ysabeau Infant', sans-serif;
   color: aliceblue;
 }
 
@@ -105,7 +105,6 @@ footer h3.footer-contact {
 }
 footer h3.footer-contact a {
   font-size: 1.8rem;
-  font-family: "Tenali Ramakrishna", sans-serif;
   color: black;
   background-color: aliceblue;
 }
