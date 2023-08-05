@@ -5,7 +5,7 @@
   list-style: none;
   background-color: #090909;
   font-size: 24px;
-  font-family: 'Ysabeau Infant', sans-serif;
+  font-family: "Ysabeau Infant", sans-serif;
   color: aliceblue;
 }
 
@@ -105,6 +105,7 @@ footer h3.footer-contact {
 }
 footer h3.footer-contact a {
   font-size: 1.8rem;
+  font-family: "Ysabeau Infant", sans-serif;
   color: black;
   background-color: aliceblue;
 }
@@ -113,11 +114,24 @@ footer h3.footer-contact a {
 .banner {
   width: 100%;
 }
-.banner div {
+.banner .img-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.banner .img-container img {
   width: 100%;
 }
-.banner div img {
-  width: 100%;
+.banner .img-container p.banner-title {
+  font-size: 11rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  font-family: "Trochut", sans-serif;
+  opacity: 0.7;
+  text-align: center;
 }
 
 p.p-margin-0 {
@@ -150,6 +164,7 @@ p.p-margin-0 {
   padding-top: 60px;
   padding-bottom: 60px;
   width: 100%;
+  overflow: hidden;
 }
 .know-our-music-container h3 {
   padding-bottom: 60px;
@@ -172,18 +187,32 @@ p.p-margin-0 {
 }
 .albums-banner div {
   width: 70%;
+  position: relative;
+  overflow: hidden;
 }
 .albums-banner div img {
   width: 100%;
 }
+.albums-banner div p.banner-title {
+  font-size: 11rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  font-family: "Trochut", sans-serif;
+  opacity: 0.7;
+  text-align: center;
+}
 
 .albums-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-top: 60px;
   padding-bottom: 60px;
   width: 100%;
+  overflow: hidden;
 }
 .albums-container h3 {
   font-size: 50px;
@@ -200,7 +229,14 @@ p.p-margin-0 {
   align-items: center;
 }
 .albums-container div div img {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.albums-container div div img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  z-index: 0;
+  border: 2px solid #ff8a84;
 }
 .albums-container div div p {
   font-size: 33px;
@@ -214,9 +250,22 @@ p.p-margin-0 {
 }
 .tours-banner div {
   width: 70%;
+  position: relative;
+  overflow: hidden;
 }
 .tours-banner div img {
   width: 100%;
+}
+.tours-banner div .banner-title {
+  font-size: 11rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  font-family: "Trochut", sans-serif;
+  opacity: 0.7;
+  text-align: center;
 }
 
 p.map {
@@ -231,17 +280,32 @@ p.map {
 }
 .media-banner div {
   width: 70%;
+  position: relative;
+  overflow: hidden;
 }
 .media-banner div img {
   width: 100%;
 }
+.media-banner div p.banner-title {
+  font-size: 11rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  font-family: "Trochut", sans-serif;
+  opacity: 0.7;
+  text-align: center;
+}
 
 .media-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-top: 60px;
   padding-bottom: 60px;
+  width: 100%;
+  overflow: hidden;
 }
 .media-container h4.photos-title {
   font-size: 50px;
@@ -290,17 +354,32 @@ p.map {
 }
 .about-us-banner div {
   width: 70%;
+  position: relative;
+  overflow: hidden;
 }
 .about-us-banner div img {
   width: 100%;
 }
+.about-us-banner div p.banner-title {
+  font-size: 11rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  font-family: "Trochut", sans-serif;
+  opacity: 0.7;
+  text-align: center;
+}
 
 .history-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 50px;
-  padding-bottom: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 100%;
+  overflow: hidden;
 }
 .history-container h3.history-title {
   font-size: 50px;
@@ -338,11 +417,13 @@ p.map {
 }
 
 .contact-us-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 40px;
-  margin-bottom: 50px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 100%;
+  overflow: hidden;
 }
 .contact-us-container h3.contact-us-title {
   font-size: 50px;
@@ -454,6 +535,9 @@ p.map {
     font-size: 35px;
   }
   /* Index Page Query */
+  p.banner-title {
+    font-size: 4rem !important;
+  }
   #index-row {
     flex-direction: column;
   }
@@ -544,14 +628,18 @@ p.map {
     margin-top: 30px;
   }
 }
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1366px) {
   * {
     font-size: 20px;
+  }
+  header.header div {
+    width: 100%;
+    justify-content: space-evenly;
   }
   header.header div .navbar-header {
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: center !important;
   }
   header.header div .navbar-header nav ul {
     display: flex;
@@ -570,6 +658,9 @@ p.map {
   header.header div .navbar-header nav ul .item-nav-last {
     padding: 10px 15px;
     padding-right: 0px;
+  }
+  p.banner-title {
+    font-size: 5rem !important;
   }
 }
 

@@ -1,0 +1,35 @@
+@mixin page-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 100%;
+    overflow: hidden;
+}
+
+@mixin page-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@mixin img-hover-animation {
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    transition-duration: 0.5s;
+    z-index: 0;
+    border: 2px solid #ff8a84;
+}
+
+@mixin banner-title {
+    font-size: 11rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    font-family: 'Trochut', sans-serif;
+    opacity: 0.7;
+    text-align: center;
+}

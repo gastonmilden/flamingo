@@ -1,4 +1,5 @@
 @import "resets";
+@import "mixins";
 
 body {
     background-color: #090909;
@@ -124,11 +125,17 @@ footer {
 .banner {
     width: 100%;
 
-    div {
+    .img-container {
         width: 100%;
+        position: relative;
+        overflow: hidden;
 
         img {
             width: 100%;
+        }
+
+        p.banner-title {
+            @include banner-title;
         }
     }
 }
@@ -157,12 +164,7 @@ p.p-margin-0 {
 }
 
 .know-our-music-container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    width: 100%;
+    @include page-container;
 
     h3 {
         padding-bottom: 60px;
@@ -183,26 +185,25 @@ p.p-margin-0 {
 /* ------------------------------- ALBUMS */
 
 .albums-banner {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    @include page-banner;
 
     div {
         width: 70%;
+        position: relative;
+        overflow: hidden;
 
         img {
             width: 100%;
+        }
+
+        p.banner-title {
+            @include banner-title;
         }
     }
 }
 
 .albums-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    width: 100%;
+    @include page-container;
 
     h3 {
         font-size: 50px;
@@ -220,7 +221,11 @@ p.p-margin-0 {
             align-items: center;
 
             img {
-                padding-bottom: 20px;
+                margin-bottom: 20px;
+            }
+
+            img:hover {
+                @include img-hover-animation;
             }
 
             p {
@@ -233,15 +238,19 @@ p.p-margin-0 {
 /* ------------------------------- TOUR */
 
 .tours-banner {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    @include page-banner;
 
     div {
         width: 70%;
+        position: relative;
+        overflow: hidden;
 
         img {
             width: 100%;
+        }
+
+        .banner-title {
+            @include banner-title;
         }
     }
 }
@@ -253,25 +262,25 @@ p.map {
 /* ------------------------------- MEDIA */
 
 .media-banner {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    @include page-banner;
 
     div {
         width: 70%;
+        position: relative;
+        overflow: hidden;
 
         img {
             width: 100%;
+        }
+
+        p.banner-title {
+            @include banner-title;
         }
     }
 }
 
 .media-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    @include page-container;
 
     h4.photos-title {
         font-size: 50px;
@@ -294,11 +303,7 @@ p.map {
             }
 
             img:hover {
-                -webkit-transform:scale(1.1);
-                transform:scale(1.1);
-                transition-duration: 0.5s;
-                z-index: 0;
-                border: 2px solid #ff8a84;
+                @include img-hover-animation;
             }
         }
     }
@@ -323,25 +328,25 @@ p.map {
 /* ------------------------- ABOUT US */
 
 .about-us-banner {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    @include page-banner;
 
     div {
         width: 70%;
+        position: relative;
+        overflow: hidden;
 
         img {
             width: 100%;
+        }
+
+        p.banner-title {
+            @include banner-title;
         }
     }
 }
 
 .history-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50px;
-    padding-bottom: 40px;
+    @include page-container;
 
     h3.history-title {
         font-size: 50px;
@@ -385,11 +390,7 @@ p.map {
 }
 
 .contact-us-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
-    margin-bottom: 50px;
+    @include page-container;
 
     h3.contact-us-title {
         font-size: 50px;

@@ -81,6 +81,11 @@
     }
 
     /* Index Page Query */
+
+    p.banner-title {
+        font-size: 4rem !important;
+    }
+
     #index-row {
         flex-direction: column;
     }
@@ -208,17 +213,20 @@
 
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1366px) {
     * {
         font-size: 20px;
     }
 
-    header.header {
+    header.header {     
         div {
+            width: 100%;
+            justify-content: space-evenly;
+
             .navbar-header {
                 width: 100%;
                 display: flex;
-                justify-content: end;
+                justify-content: center !important; 
 
                 nav {
                     ul {
@@ -245,5 +253,9 @@
                 }
             }
         }
+    }
+
+    p.banner-title {
+        font-size: 5rem !important;
     }
 }
